@@ -168,3 +168,7 @@ label input[type="checkbox"] {
   display: none;
 }
 
+.tabel{
+  font-family: 'Courier New', Courier, monospace;
+  color: #3b5998;
+}
