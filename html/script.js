@@ -60,29 +60,30 @@ function getInfo() {
 	var ondernemingsnummer2 = document.getElementById('ondernemingsnummer2').value
 
     var table = document.getElementById('api')
-    var counter1;
-    var counter2;
+    var counter1 = 0;
+    var counter2 = 0;
  
 
     for(var k = 0; k< testAPI.length; k++){
         
-        if(ondernemingsnummer1 == testAPI[k].ondernemingsnummer){
+        if(ondernemingsnummer1 == testAPI[0].ondernemingsnummer){
         counter1 = 0
     }
-        else if(ondernemingsnummer1 != testAPI[k].ondernemingsnummer){
-        counter1++;
+        else if(ondernemingsnummer1 == testAPI[k].ondernemingsnummer){
+        counter1 += k;
     }
 
-        if(ondernemingsnummer2 == testAPI[k].ondernemingsnummer){
+        if(ondernemingsnummer2 == testAPI[0].ondernemingsnummer){
         counter2 = 0
     }
-        else if(ondernemingsnummer2 != testAPI[k].ondernemingsnummer){
-        counter2++;
-        counter2 = counter2
+        else if(ondernemingsnummer2 == testAPI[k].ondernemingsnummer){
+        counter2 += k;
         
     }}
         
-    
+
+
+ 
     
 
 
