@@ -88,7 +88,7 @@ function getInfo() {
 
 
 	for(var i = 0; i < ondernemingsnummersAPI.length; i++) {
-		if(ondernemingsnummer1 == ondernemingsnummersAPI[i].ondernemingsnummer && ondernemingsnummer2 == ondernemingsnummersAPI[i].ondernemingsnummer) {
+		if(ondernemingsnummer1 === ondernemingsnummersAPI[i].ondernemingsnummer && ondernemingsnummer2 === ondernemingsnummersAPI[i].ondernemingsnummer) {
 			console.log(" gegevens zijn juist ")
             
             var row = `<tr>
