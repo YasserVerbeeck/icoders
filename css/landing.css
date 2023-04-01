@@ -7,7 +7,7 @@ body {
     height: 100%;
     left: 0;
     top: 0;
-    background-color: rgba(152, 180, 212);
+    background-color: rgb(115, 156, 204);
 
 }
 header {
@@ -79,7 +79,7 @@ h1{
 
 
 footer{
-    background-color: rgb(105, 144, 188) ;
+    background-color: rgb(67, 106, 150) ;
     display: flex;
     justify-items: center;
     justify-content: center;
