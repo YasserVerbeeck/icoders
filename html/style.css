@@ -33,7 +33,7 @@ body {
   color: #FFFFFF;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("/images/unnamed.jpg");
+  background-image: url("/icoders/images/unnamed.jpg");
   overflow: hidden;
 }
 .box-form .left .overlay {
@@ -41,7 +41,6 @@ body {
 width: 800px;
   height: 100%;
   background: #dcdcfdad;
-  background: image();
   overflow: hidden;
   box-sizing: border-box;
 }
