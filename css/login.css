@@ -1,5 +1,5 @@
 body {
-  background-image: linear-gradient(135deg, rgba(88, 130, 184, 0.747) 10%, rgba(69, 104, 143, 0.79) 100%);
+  background-image: linear-gradient(135deg, rgba(72, 72, 72, 0.747) 10%, rgba(67, 67, 67, 0.79) 100%);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -18,7 +18,7 @@ body {
   flex: 1 1 100%;
   align-items: stretch;
   justify-content: space-between;
-  box-shadow: 0 0 20px 6px #afaffc85;
+  box-shadow: 0 0 20px 6px #48484885;
 }
 @media (max-width: 980px) {
   .box-form {
@@ -40,7 +40,7 @@ body {
   padding: 30px;
 width: 800px;
   height: 100%;
-  background: rgba(74, 139, 214, 0.256);
+  background: rgba(72, 72, 72, 0.256);
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -117,8 +117,8 @@ width: 800px;
   display: inline-block;
   border: 0;
   outline: 0;
-  box-shadow: 0px 4px 20px 0px #49c628a6;
-  background-image: linear-gradient(135deg, #70F570 10%, #49C628 100%);
+  box-shadow: 0px 4px 20px 0px #1f4d62a6;
+  background-image: linear-gradient(135deg, #3a7ca8 10%, #3b7fac 100%);
 }
 
 .box-form .right button a {
@@ -171,7 +171,5 @@ label input[type="checkbox"] {
   font-family: 'Courier New', Courier, monospace;
   color: #3b5998;
 }
-
-
 
 
