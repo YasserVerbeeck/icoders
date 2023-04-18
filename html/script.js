@@ -1,25 +1,3 @@
-var ondernemingsnummersAPI = [
-	{ 
-		ondernemingsnummer: "test1",
-	},
-    {
-        ondernemingsnummer: "test2"
-    },
-    {
-        ondernemingsnummer: "BE123"
-    },
-	{ 
-		ondernemingsnummer: "BE456"
-	},
-    { 
-		ondernemingsnummer: "BE789"
-	},
-    {
-        ondernemingsnummer: "BE012"
-    }
-
-]
-
 var testAPI = [
     {ondernemingsnummer:"test1",
      naam:'FC Barcelona',
@@ -66,29 +44,19 @@ function getInfo() {
 
     for(var k = 0; k< testAPI.length; k++){
         
-        if(ondernemingsnummer1 == testAPI[0].ondernemingsnummer){
-        counter1 = 0
-    }
-        else if(ondernemingsnummer1 == testAPI[k].ondernemingsnummer){
+ if(ondernemingsnummer1 == testAPI[k].ondernemingsnummer){
         counter1 += k;
     }
-
-        if(ondernemingsnummer2 == testAPI[0].ondernemingsnummer){
-        counter2 = 0
-    }
-        else if(ondernemingsnummer2 == testAPI[k].ondernemingsnummer){
+ if(ondernemingsnummer2 == testAPI[k].ondernemingsnummer){
         counter2 += k;
         
     }}
+
+    
         
 
-
- 
-    
-
-
-	for(var i = 0; i < ondernemingsnummersAPI.length; i++) {
-		if(ondernemingsnummer1 === ondernemingsnummersAPI[i].ondernemingsnummer && ondernemingsnummer2 === ondernemingsnummersAPI[i].ondernemingsnummer) {
+	for(var i = 0; i < testAPI.length; i++) {
+		if(testAPI[i].ondernemingsnummer.includes(ondernemingsnummer1) == true, testAPI[i].ondernemingsnummer.includes(ondernemingsnummer2) == true) {
 			console.log(" gegevens zijn juist ")
             
             var row = `<tr>
@@ -108,9 +76,16 @@ function getInfo() {
             
 		}
 
-        else {
+        else// if(testAPI[i].ondernemingsnummer.includes(ondernemingsnummer1) == false, testAPI[i].ondernemingsnummer.includes(ondernemingsnummer2) == false) 
+        {
+            
+			
             document.getElementById("errormessage").innerHTML = "foute gegevens";
             console.log("foute gegevens")
+
+            return
+
+
         }
 	}
 	
