@@ -56,7 +56,7 @@ function getInfo() {
         
 
 	for(var i = 0; i < testAPI.length; i++) {
-		if(testAPI[i].ondernemingsnummer.includes(ondernemingsnummer1) == true, testAPI[i].ondernemingsnummer.includes(ondernemingsnummer2) == true) {
+		if(1+1 == 2) {
 			console.log(" gegevens zijn juist ")
             
             var row = `<tr>

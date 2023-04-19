@@ -23,9 +23,9 @@
 		<h5>Welkom</h5>
 		<p>Heb je geen account? <a href="#">Maak hier een account aan.</a></p>
 		<div class="inputs">
-			<input type="text" placeholder="gebruikersnaam">
+			<input type="text" placeholder="gebruikersnaam" id="username">
 			<br>
-			<input type="password" placeholder="wachtwoord">
+			<input type="password" placeholder="wachtwoord" id="password">
 		</div>
 
 			<br><br>
@@ -40,16 +40,20 @@
 		</div>
 
 			<br>
-			<button> <a href="index.html">Inloggen</a></button>
+			<button id="btn" onclick="getLogin()" href="index.html" ><a href="index.html">inloggen</a></button>
 	</div>
-
+	
 </div>
 <!-- partial -->
 
 
 
 </body>
+
+<script src="/html/login.js"></script>
 </html>
+
+
 
 
 
