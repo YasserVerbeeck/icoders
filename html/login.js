@@ -3,14 +3,22 @@ var username = "admin"
 var password = "test"
 
 
-function getLogin() {
+function getInfo() {
 	var usernamehtml = document.getElementById("username").value
     var passwordhtml = document.getElementById("password")
+    var loginerrormessage = document.getElementById("loginerror")
     var button;
 
 
+
     if(usernamehtml == username){
-        button = document.getElementById("btn").innerHTML += `<a href = "index.html"></a>`
+        
+        location.href("landing.html")
+
+    }
+    else
+    {
+        loginerrormessage = document.getElementById("loginerror") += `gebruikersnaam en/of wachtwoord komen niet overeen!`
     }
    
     return
