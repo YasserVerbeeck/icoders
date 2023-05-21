@@ -76,7 +76,7 @@ function getInfo() {
             
 		}
 
-        else// if(testAPI[i].ondernemingsnummer.includes(ondernemingsnummer1) == false, testAPI[i].ondernemingsnummer.includes(ondernemingsnummer2) == false) 
+        else //if(testAPI[i].ondernemingsnummer.includes(ondernemingsnummer1) == false, testAPI[i].ondernemingsnummer.includes(ondernemingsnummer2) == false) 
         {
             
 			
