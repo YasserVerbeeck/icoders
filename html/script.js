@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 var testAPI = [
     {ondernemingsnummer:"test1",
      naam:'FC Barcelona',
@@ -28,65 +35,60 @@ var testAPI = [
      naam:'iCoders', 
      omzet:'769900751,99',
      opbrengst:'2399876,55'},
-    
 ]
 
 
 
 function getInfo() {
-	var ondernemingsnummer1 = document.getElementById('ondernemingsnummer1').value
-	var ondernemingsnummer2 = document.getElementById('ondernemingsnummer2').value
-
-    var table = document.getElementById('api')
-    var counter1 = 0;
-    var counter2 = 0;
- 
-
-    for(var k = 0; k< testAPI.length; k++){
-        
- if(ondernemingsnummer1 == testAPI[k].ondernemingsnummer){
-        counter1 += k;
+    var ondernemingsnummer1 = document.getElementById('ondernemingsnummer1').value;
+    var ondernemingsnummer2 = document.getElementById('ondernemingsnummer2').value;
+  
+    var table = document.getElementById('api');
+    table.innerHTML = '';
+  
+    var match1 = false;
+    var match2 = false;
+  
+    for (var i = 0; i < testAPI.length; i++) {
+      if (testAPI[i].ondernemingsnummer === ondernemingsnummer1) {
+        var row = `<tr>
+          <td>${testAPI[i].naam}:</td><br><br>
+          <th><p class="tabel">BE-nummer: <p>${testAPI[i].ondernemingsnummer}</th><br><br>
+          <th><p class="tabel">omzet: <p>${testAPI[i].omzet}</th><br><br>
+          <th><p class="tabel">opbrengst: <p>${testAPI[i].opbrengst}</th>
+        </tr>`;
+        table.innerHTML += row;
+        match1 = true;
+      }
+  
+      if (testAPI[i].ondernemingsnummer === ondernemingsnummer2) {
+        var row = `<tr>
+          <td>${testAPI[i].naam}:</td><br><br>
+          <th><p class="tabel">BE-nummer: <p>${testAPI[i].ondernemingsnummer}</th><br><br>
+          <th><p class="tabel">omzet: <p>${testAPI[i].omzet}</th><br><br>
+          <th><p class="tabel">opbrengst: <p>${testAPI[i].opbrengst}</th>
+        </tr>`;
+        table.innerHTML += row;
+        match2 = true;
+      }
     }
- if(ondernemingsnummer2 == testAPI[k].ondernemingsnummer){
-        counter2 += k;
-        
-    }}
+  
+    if (!match1) {
+      table.innerHTML += "<tr><td colspan='4'>Business with ondernemingsnummer1 not found</td></tr>";
+    }
+    if (!match2) {
+      table.innerHTML += "<tr><td colspan='4'>Business with ondernemingsnummer2 not found</td></tr>";
+    }
+  }
 
-    
-        
-
-	for(var i = 0; i < testAPI.length; i++) {
-		if(1+1 == 2) {
-			console.log(" gegevens zijn juist ")
-            
-            var row = `<tr>
-							<td>${testAPI[counter1].naam}:</td><br><br>
-							<th><p class="tabel" >BE-nummer: <p>${testAPI[counter1].ondernemingsnummer}</th><br><br>
-                            <th><p class="tabel" >omzet: <p>${testAPI[counter1].omzet}</th><br><br>
-							<th><p class="tabel" >opbrengst: <p>${testAPI[counter1].opbrengst}</th>
-					  </tr>
-                      <tr>
-							<td>${testAPI[counter2].naam}:</td><br><br>
-                            <th><p class="tabel" >BE-nummer: <p>${testAPI[counter2].ondernemingsnummer}</th><br><br>
-							<th><p class="tabel" >omzet: <p>${testAPI[counter2].omzet}</th><br><br>
-							<th><p class="tabel" >opbrengst: <p>${testAPI[counter2].opbrengst}</th>
-					  </tr>`
-			table = document.getElementById("api").innerHTML += row
-			return
-            
-		}
-
-        else //if(testAPI[i].ondernemingsnummer.includes(ondernemingsnummer1) == false, testAPI[i].ondernemingsnummer.includes(ondernemingsnummer2) == false) 
-        {
-            
-			
-            document.getElementById("errormessage").innerHTML = "foute gegevens";
-            console.log("foute gegevens")
-
-            return
-
-
-        }
-	}
-	
-}
+document.addEventListener("DOMContentLoaded", function() {
+    var button = document.getElementById("popupBtn");
+  button.addEventListener("click", function() {
+    var newWindow = window.open("", "_blank", "width=400,height=300");
+  
+      // Write content to the new window
+      newWindow.document.write("<p>This is a pop-up screen.</p>");
+  
+      // Close the new window after 3 seconds (optional)
+    });
+  });
