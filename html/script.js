@@ -88,5 +88,13 @@ function getInfo() {
 
         }
 	}
-	
+    var button = document.getElementById("popupBtn");
+    var popup = document.getElementById("popup");
+    button.addEventListener("click", function() {
+        popup.style.display = "block";
+      });
+    
+      popup.getElementsByClassName("close")[0].addEventListener("click", function() {
+        popup.style.display = "none";
+    });
 }
