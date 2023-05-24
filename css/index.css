@@ -132,3 +132,23 @@ footer{
 .logo{
     margin-right: 20%;
 }
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+  .close {
+    float: right;
+    cursor: pointer;
+  }
+  .close:hover {
+    color: red;
+  }
