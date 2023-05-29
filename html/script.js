@@ -37,6 +37,8 @@ var testAPI = [
      opbrengst:'2399876,55'},
 ]
 
+var searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+
 
 
 function getInfo() {
@@ -79,6 +81,10 @@ function getInfo() {
     if (!match2) {
       table.innerHTML += "<tr><td colspan='4'>Business with ondernemingsnummer2 not found</td></tr>";
     }
+    var currentDate = new Date().toLocaleDateString();
+    var searchEntry = { ondernemingsnummer1: ondernemingsnummer1, ondernemingsnummer2: ondernemingsnummer2, date: currentDate };
+    searchHistory.push(searchEntry);
+    localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
   }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -87,7 +93,13 @@ document.addEventListener("DOMContentLoaded", function() {
     var newWindow = window.open("", "_blank", "width=400,height=300");
   
       // Write content to the new window
-      newWindow.document.write("<p>This is a pop-up screen.</p>");
+      var historyContent = "<h2>Search History</h2>";
+    for (var i = 0; i < searchHistory.length; i++) {
+      historyContent += `<p>Ondernemingsnummer 1: ${searchHistory[i].ondernemingsnummer1}</p>`;
+      historyContent += `<p>Ondernemingsnummer 2: ${searchHistory[i].ondernemingsnummer2}</p>`;
+      historyContent += `<p>Date: ${searchHistory[i].date}</p><br>`;
+    }
+    newWindow.document.write(historyContent);
   
       // Close the new window after 3 seconds (optional)
     });
