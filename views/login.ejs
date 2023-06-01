@@ -9,8 +9,11 @@
 </head>
 
 <body>
-
-	<div class="box-form">
+	<% if (messages && messages.error) { %>
+		<p class="error-message"><%= messages.error %></p>
+	  <% } %>
+	
+ 	<div class="box-form">
 	<div class="left">
 		<div class="overlay">
 		<h1></h1>
@@ -21,11 +24,12 @@
 
 		<div class="right">
 		<h5>Welkom</h5>
-		<p>Heb je geen account? <a href="#">Maak hier een account aan.</a></p>
+		<p>Heb je geen account? <a href="/signup">Maak hier een account aan.</a></p>
+		<form>
 		<div class="inputs">
-			<input type="text" placeholder="gebruikersnaam" id="username">
+			<input type="text" placeholder="username" id="username">
 			<br>
-			<input type="password" placeholder="wachtwoord" id="password">
+			<input type="password" placeholder="password" id="password">
 		</div>
 
 			<br><br>
@@ -41,10 +45,11 @@
 		</div>
 
 			<br>
-			<button id="btn" onclick="getInfo()" href="index.html" ><a href="landing.html">inloggen</a></button>
+			<button id="btn" type="sub">inloggen</button>
 	</div>
 
 </div>
+</form>
 
 
 
