@@ -14,7 +14,7 @@ const main = async () => {
     const db = client.db(dbName);
     const collection = db.collection(collectionName);
 
-    // Gebruiker aanmelden
+    // Gebruiker HANDMATIG aanmelden
     const user = {
       username: 'admin',
       email: 'gebruiker@test.be',
