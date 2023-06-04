@@ -16,10 +16,10 @@ const client = new MongoClient(uri);
 // Middleware om de gegevens van de "submit" enz. te verwerken
 app.use(express.urlencoded({ extended: true }));
 
-// EJS instellen als de templating engine
+// EJS instellen als de templating engine (HBS>EJS maar ja)
 app.set('view engine', 'ejs');
 
-// Statische bestanden serveren
+// Statische bestanden serveren + source: Flowstack
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Homepage route
